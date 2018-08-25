@@ -1,0 +1,330 @@
+================================================================================
+=                                                                              =    
+=                        CRUNCHBASE CSV TABLES AND FIELDS                      =
+=                                                                              =    
+================================================================================
+
+
+    466M   organizations.csv
+    248M   organization_descriptions.csv
+    304M   people.csv
+    270M   people_descriptions.csv
+     58M   degrees.csv
+     72M   funding_rounds.csv
+     28M   investments.csv
+    7.4M   investment_partners.csv
+     36M   investors.csv
+    1.7M   funds.csv
+     31M   acquisitions.csv
+    4.3M   ipos.csv
+     18M   events.csv
+     37M   event_appearances.csv
+    196M   jobs.csv
+     53K   category_groups.csv
+    1.5M   org_parents.csv
+
+
+
+################################################################################
+#                              organizations.csv                               #
+################################################################################
+
+  - company_name
+  - roles
+  - permalink
+  - domain
+  - homepage_url
+  - country_code
+  - state_code
+  - region
+  - city
+  - address
+  - status
+  - short_description
+  - category_list
+  - category_group_list
+  - funding_rounds
+  - funding_total_usd
+  - founded_on
+  - last_funding_on
+  - closed_on
+  - employee_count
+  - email
+  - phone
+  - facebook_url
+  - linkedin_url
+  - cb_url
+  - logo_url
+  - twitter_url
+  - aliases
+  - uuid
+  - created_at
+  - updated_at
+  - primary_role
+  - type
+
+
+################################################################################
+#                        organization_descriptions.csv                         #
+################################################################################
+
+  - uuid
+  - description
+
+
+################################################################################
+#                                  people.csv                                  #
+################################################################################
+
+  - first_name
+  - last_name
+  - country_code
+  - state_code
+  - city
+  - cb_url
+  - logo_url
+  - twitter_url
+  - facebook_url
+  - linkedin_url
+  - primary_affiliation_organization
+  - primary_affiliation_title
+  - primary_organization_uuid
+  - gender
+  - uuid
+  - created_at
+  - updated_at
+
+
+################################################################################
+#                           people_descriptions.csv                            #
+################################################################################
+
+  - uuid
+  - description
+
+
+################################################################################
+#                                 degrees.csv                                  #
+################################################################################
+
+  - degree_uuid
+  - institution_uuid
+  - person_uuid
+  - degree_type
+  - subject
+  - started_on
+  - completed_on
+  - is_completed
+  - created_at
+  - updated_at
+
+
+################################################################################
+#                              funding_rounds.csv                              #
+################################################################################
+
+  - company_name
+  - country_code
+  - state_code
+  - region
+  - city
+  - investment_type
+  - announced_on
+  - raised_amount_usd
+  - raised_amount
+  - raised_amount_currency_code
+  - post_money_valuation_usd
+  - post_money_valuation
+  - post_money_currency_code
+  - investor_count
+  - cb_url
+  - company_uuid
+  - funding_round_uuid
+  - created_at
+  - updated_at
+  - investor_names
+  - investor_uuids
+
+
+################################################################################
+#                               investments.csv                                #
+################################################################################
+
+  - funding_round_uuid
+  - investor_uuid
+  - is_lead_investor
+
+
+################################################################################
+#                           investment_partners.csv                            #
+################################################################################
+
+  - funding_round_uuid
+  - investor_uuid
+  - partner_uuid
+
+
+################################################################################
+#                                investors.csv                                 #
+################################################################################
+
+  - investor_name
+  - roles
+  - domain
+  - country_code
+  - state_code
+  - region
+  - city
+  - investor_type
+  - investment_count
+  - total_funding_usd
+  - founded_on
+  - closed_on
+  - cb_url
+  - logo_url
+  - twitter_url
+  - facebook_url
+  - uuid
+  - updated_at
+
+
+################################################################################
+#                                  funds.csv                                   #
+################################################################################
+
+  - entity_uuid
+  - fund_uuid
+  - fund_name
+  - announced_on
+  - raised_amount
+  - raised_amount_currency_code
+  - created_at
+  - updated_at
+
+
+################################################################################
+#                               acquisitions.csv                               #
+################################################################################
+
+  - acquiree_name
+  - acquiree_country_code
+  - state_code
+  - acquiree_region
+  - acquiree_city
+  - acquirer_name
+  - acquirer_country_code
+  - acquirer_state_code
+  - acquirer_region
+  - acquirer_city
+  - acquisition_type
+  - acquired_on
+  - price_usd
+  - price
+  - price_currency_code
+  - acquiree_cb_url
+  - acquirer_cb_url
+  - acquiree_uuid
+  - acquirer_uuid
+  - acquisition_uuid
+  - created_at
+  - updated_at
+
+
+################################################################################
+#                                   ipos.csv                                   #
+################################################################################
+
+  - name
+  - country_code
+  - company_state_code
+  - region
+  - city
+  - stock_exchange_symbol
+  - stock_symbol
+  - went_public_on
+  - price_usd
+  - price
+  - price_currency_code
+  - money_raised_usd
+  - cb_url
+  - ipo_uuid
+  - company_uuid
+  - created_at
+  - updated_at
+
+
+################################################################################
+#                                  events.csv                                  #
+################################################################################
+
+  - uuid
+  - name
+  - short_description
+  - started_on
+  - ended_on
+  - registration_url
+  - venue_name
+  - location_uuid
+  - description
+  - city
+  - region
+  - country_code
+  - continent
+  - permalink
+  - cb_url
+  - logo_url
+  - event_roles
+  - created_at
+  - updated_at
+
+
+################################################################################
+#                            event_appearances.csv                             #
+################################################################################
+
+  - event_uuid
+  - appearance_type
+  - participant_uuid
+  - participant_type
+  - created_at
+  - updated_at
+
+
+################################################################################
+#                                   jobs.csv                                   #
+################################################################################
+
+  - person_uuid
+  - org_uuid
+  - job_uuid
+  - started_on
+  - ended_on
+  - is_current
+  - title
+  - job_type
+
+
+################################################################################
+#                             category_groups.csv                              #
+################################################################################
+
+  - uuid
+  - category_name
+  - category_group_list
+
+
+################################################################################
+#                               org_parents.csv                                #
+################################################################################
+
+  - uuid
+  - parent_uuid
+  - created_at
+  - updated_at
+
+
+================================================================================
+
+
+  # !!bash<cr> when line is selected
+  # sed -n "1p" people.csv | tr -s ',' '\n'
