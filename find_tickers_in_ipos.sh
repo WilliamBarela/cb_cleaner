@@ -1,7 +1,8 @@
 # pull select data from ipos.csv for each ticker that matches from tickers
 for i in $(seq 1 $(wc -l tickers | awk '{print $1}')); do 
   key=$(sed -n $i"p" tickers);
-  awk -v var=$key -F, -vOFS=, '$7 ~ var{print $7,$6,var,$15,$2,$3,$4,$5,$1}' ipos.csv | grep -iwP "^\"$key\"" >> matches.csv;
+  # need to add the check for , in the fields...that is why the vFPAT
+  awk -v var=$key -vFPAT='([^,]*)|("[^"]+")' -vOFS=, '$7 ~ var{print $7,$6,var,$15,$2,$3,$4,$5,$1}' ipos.csv | grep -iwP "^\"$key\"" >> matches.csv;
 done
 
 # add header to file:
